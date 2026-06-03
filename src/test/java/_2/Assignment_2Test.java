@@ -1,4 +1,4 @@
-package _1;
+package _2;
 
 import junitparams.JUnitParamsRunner;
 import org.junit.After;
@@ -9,16 +9,16 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(JUnitParamsRunner.class)
 public class Assignment_2Test {
-    private Assignment_1 assignment1;
+    private Assignment_2 assignment2;
 
     @Before
     public void before() {
-        assignment1 = new Assignment_1();
+        assignment2 = new Assignment_2();
     }
 
     @After
     public void after() {
-        assignment1 = null;
+        assignment2 = null;
     }
 
 
