@@ -61,4 +61,10 @@ public class MainTest {
             assertEquals(0, main.getX());
         }
     }
+
+    @Test
+    public void test_1_c_C2() {
+        main.c(1);
+        assertEquals(1, main.getX());
+    }
 }
