@@ -2,7 +2,6 @@ package _2;
 
 public class Assignment2 {
     static void main() {
-        System.out.println(primeFactors(15));
     }
 
     public static String primeFactors(int n) {
