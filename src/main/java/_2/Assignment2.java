@@ -1,19 +1,24 @@
 package _2;
 
 public class Assignment2 {
-    static void main(){}
-    public static void primeFactors(int n) {
+    static void main() {
+        System.out.println(primeFactors(15));
+    }
+
+    public static String primeFactors(int n) {
+        StringBuilder result = new StringBuilder();
         while (n % 2 == 0) {
-            System.out.print(2 + " ");
+            result.append(2).append(" ");
             n /= 2;
         }
-        for (int i = 3; i <= Math.sqrt(n); i+= 2) {
-            while (n%i == 0) {
-                System.out.print(i + " ");
+        for (int i = 3; i <= Math.sqrt(n); i += 2) {
+            while (n % i == 0) {
+                result.append(i).append(" ");
                 n /= i;
             }
         }
         if (n > 2)
-            System.out.print(n);
+            result.append(n).append(" ");
+        return result.toString().trim();
     }
 }
