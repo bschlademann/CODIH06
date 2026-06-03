@@ -15,4 +15,13 @@ public class Assignment3 {
     static void main() {
     }
 
+    private LineStart findLineStart() throws NoLineStartFoundException {
+        for (int row = 0; row < matrix.length; row++) {
+            for (int col = 0; col < matrix[row].length; col++) {
+                if (matrix[row][col] == 1)
+                    return new LineStart(row, col);
+            }
+        }
+        throw new NoLineStartFoundException("no line start found");
+    }
 }
