@@ -1,6 +1,6 @@
 package _2;
 
-public class Assignment_2 {
+public class Assignment2 {
     static void main(){}
     public static void primeFactors(int n) {
         while (n % 2 == 0) {

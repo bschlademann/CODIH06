@@ -10,12 +10,12 @@ import org.junit.runner.RunWith;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(JUnitParamsRunner.class)
-public class Assignment_1Test {
-    private Assignment_1 assignment1;
+public class Assignment1Test {
+    private Assignment1 assignment1;
 
     @Before
     public void before() {
-        assignment1 = new Assignment_1();
+        assignment1 = new Assignment1();
     }
 
     @After

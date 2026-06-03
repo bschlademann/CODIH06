@@ -1,6 +1,6 @@
 package _1;
 
-public class Assignment_1 {
+public class Assignment1 {
     private int x;
     private int y;
 
