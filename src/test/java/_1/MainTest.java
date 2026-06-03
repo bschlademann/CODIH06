@@ -24,14 +24,14 @@ public class MainTest {
     }
 
     @Test
-    public void testC0() {
+    public void test_1_a_C0() {
         main.a(1);
         assertEquals(1, main.getX());
     }
 
     @Test
     @Parameters({"1", "0"})
-    public void testC1(int x) {
+    public void test_1_a_C1(int x) {
         main.a(x);
         if (x > 0) {
             assertEquals(x, main.getX());
