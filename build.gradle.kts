@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("info.solidsoft.pitest") version "1.19.0"
 }
 
 group = "org.example"
@@ -15,4 +16,13 @@ dependencies {
 }
 
 tasks.test {
+    useJUnit()
+}
+
+pitest {
+    targetClasses.set(listOf("_2.Assignment2"))
+    targetTests.set(listOf("_2.Assignment2Test"))
+    mutators.set(listOf("DEFAULTS"))
+    outputFormats.set(listOf("HTML"))
+    timestampedReports.set(false)
 }
