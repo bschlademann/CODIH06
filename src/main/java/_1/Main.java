@@ -2,9 +2,18 @@ package _1;
 
 public class Main {
     private int x;
+    private int y;
 
     static void main() {
 
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
     }
 
     public void setX(int x) {
@@ -21,6 +30,14 @@ public class Main {
         if (x > 0) {
 //            C0 -> 1 test case: a(int x > 0)
             setX(x);
+        }
+    }
+
+    public void b(int x, int y) {
+        if (x > 0 && y > 0) {
+            setX(1);
+        } else {
+            setX(0);
         }
     }
 }
