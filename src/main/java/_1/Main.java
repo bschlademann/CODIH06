@@ -40,4 +40,8 @@ public class Main {
             setX(0);
         }
     }
+
+    public void c(int x) {
+        setX(x);
+    }
 }
