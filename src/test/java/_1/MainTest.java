@@ -39,4 +39,26 @@ public class MainTest {
             assertEquals(0, main.getX());
         }
     }
+
+    @Test
+    @Parameters({"1, 1", "1, 0"})
+    public void test_1_b_C1(int x, int y) {
+        main.b(x, y);
+        if (x > 0 && y > 0) {
+            assertEquals(1, main.getX());  // true-Zweig
+        } else {
+            assertEquals(0, main.getX());  // false-Zweig
+        }
+    }
+
+    @Test
+    @Parameters({"1, 1", "0, 0"})
+    public void test_1_b_C2(int x, int y) {
+        main.b(x, y);
+        if (x > 0 && y > 0) {
+            assertEquals(1, main.getX());
+        } else {
+            assertEquals(0, main.getX());
+        }
+    }
 }
