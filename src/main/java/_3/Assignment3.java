@@ -13,7 +13,16 @@ public class Assignment3 {
     private record LineStart(int row, int col) {
     }
 
-    static void main() {
+    ;
+
+    public static void main(String[] args) {
+        try {
+            LineStart lineStart = findLineStart(matrix);
+            int lineLength = findLineLength(lineStart);
+            System.out.println("line length: " + lineLength);
+        } catch (NoLineStartFoundException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
 
