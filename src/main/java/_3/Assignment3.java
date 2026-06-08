@@ -1,7 +1,7 @@
 package _3;
 
 public class Assignment3 {
-    private final int[][] matrix = {
+    private static final int[][] matrix = {
             {0, 0, 0, 0, 0, 0},
             {0, 1, 0, 0, 0, 0},
             {0, 0, 1, 0, 0, 0},
@@ -15,7 +15,8 @@ public class Assignment3 {
     static void main() {
     }
 
-    private LineStart findLineStart() throws NoLineStartFoundException {
+
+    private static LineStart findLineStart(int[][] matrix) throws NoLineStartFoundException {
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix[row].length; col++) {
                 if (matrix[row][col] == 1)
