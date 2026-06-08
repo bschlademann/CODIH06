@@ -13,12 +13,10 @@ public class Assignment3 {
     private record LineStart(int row, int col) {
     }
 
-    ;
-
     public static void main(String[] args) {
         try {
             LineStart lineStart = findLineStart(matrix);
-            int lineLength = findLineLength(lineStart);
+            int lineLength = findLineLength(matrix, lineStart);
             System.out.println("line length: " + lineLength);
         } catch (NoLineStartFoundException e) {
             System.out.println(e.getMessage());
@@ -37,7 +35,7 @@ public class Assignment3 {
     }
 
 
-    private static int findLineLength(LineStart lineStart) {
+    private static int findLineLength(int[][] matrix, LineStart lineStart) {
         int lineLength = 1;
         int[][] directionOffsets = {
                 {0, 1}, // right
