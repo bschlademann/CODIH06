@@ -64,7 +64,7 @@ public class Assignment1Test {
 
     @Test
     public void test_1_c_C2() {
-        main.c(1);
-        assertEquals(1, main.getX());
+        assignment1.c(1);
+        assertEquals(1, assignment1.getX());
     }
 }
