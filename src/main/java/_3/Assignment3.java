@@ -10,7 +10,8 @@ public class Assignment3 {
             {0, 0, 0, 0, 0, 0},
     };
 
-    private record LineStart(int row, int col){};
+    private record LineStart(int row, int col) {
+    }
 
     static void main() {
     }
@@ -24,5 +25,36 @@ public class Assignment3 {
             }
         }
         throw new NoLineStartFoundException("no line start found");
+    }
+
+
+    private static int findLineLength(LineStart lineStart) {
+        int lineLength = 1;
+        int[][] directionOffsets = {
+                {0, 1}, // right
+                {1, 1}, // lower right
+                {1, 0}, // down
+                {1, -1} // lower left
+        };
+        for (int[] offset : directionOffsets) {
+            int rowOffset = offset[0];
+            int colOffset = offset[1];
+
+            int rowIndexToCheck = lineStart.row() + rowOffset;
+            int colIndexToCheck = lineStart.col() + colOffset;
+
+
+            while (rowIndexToCheck < matrix.length // check within row count
+                    && colIndexToCheck >= 0 // check within column boundary (left)
+                    && colIndexToCheck < matrix[0].length // check within column boundary (right)
+                    && matrix[rowIndexToCheck][colIndexToCheck] == 1) // '1' found
+            {
+                lineLength++;
+//                continue to search in the found direction
+                rowIndexToCheck += rowOffset;
+                colIndexToCheck += colOffset;
+            }
+        }
+        return lineLength;
     }
 }
