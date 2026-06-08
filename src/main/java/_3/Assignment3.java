@@ -1,7 +1,7 @@
 package _3;
 
 public class Assignment3 {
-    private static final int[][] matrix = {
+    static final int[][] matrix = {
             {0, 0, 0, 0, 0, 0},
             {0, 1, 0, 0, 0, 0},
             {0, 0, 1, 0, 0, 0},
@@ -10,7 +10,7 @@ public class Assignment3 {
             {0, 0, 0, 0, 0, 0},
     };
 
-    private record LineStart(int row, int col) {
+    record LineStart(int row, int col) {
     }
 
     public static void main(String[] args) {
