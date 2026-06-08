@@ -24,7 +24,7 @@ public class Assignment3 {
     }
 
 
-    private static LineStart findLineStart(int[][] matrix) throws NoLineStartFoundException {
+    static LineStart findLineStart(int[][] matrix) throws NoLineStartFoundException {
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix[row].length; col++) {
                 if (matrix[row][col] == 1)
@@ -35,7 +35,7 @@ public class Assignment3 {
     }
 
 
-    private static int findLineLength(int[][] matrix, LineStart lineStart) {
+    static int findLineLength(int[][] matrix, LineStart lineStart) {
         int lineLength = 1;
         int[][] directionOffsets = {
                 {0, 1}, // right
