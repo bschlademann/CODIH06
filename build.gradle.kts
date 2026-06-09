@@ -13,7 +13,7 @@ repositories {
 dependencies {
     testImplementation("junit:junit:4.13.2")
     testImplementation("pl.pragmatists:JUnitParams:1.1.1")
-    testImplementation("com.codeborne:selenide:6.3.3")
+    testImplementation("com.codeborne:selenide:7.16.2")
 }
 
 tasks.test {
